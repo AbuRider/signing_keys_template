@@ -236,6 +236,7 @@ generate_keys_mk() {
     echo >> keys.mk
     echo "PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/testkey" >> keys.mk
     echo "PRODUCT_EXTRA_RECOVERY_KEYS :=" >> keys.mk
+    echo "PRODUCT_MAINLINE_BLUETOOTH_SEPOLICY_DEV_CERTIFICATES := $(dir $(PRODUCT_DEFAULT_DEV_CERTIFICATE))" >> keys.mk
 }
 
 user_input
